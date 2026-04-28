@@ -4,7 +4,7 @@ const Mentions = () => (
     <div className="prose prose-sm mt-8 max-w-none space-y-6 text-foreground/85">
       <div>
         <h2 className="font-display text-xl font-bold">Éditeur</h2>
-        <p>Marsé Bi — Marché Castors, Dakar, Sénégal. Email : contact@marsebi.sn — Tél. : +221 77 000 00 00.</p>
+        <p>e-Sandika — Marché Castors, Dakar, Sénégal. Email : contact@e-sandika.sn — Tél. : +221 77 000 00 00.</p>
       </div>
       <div>
         <h2 className="font-display text-xl font-bold">Hébergement</h2>

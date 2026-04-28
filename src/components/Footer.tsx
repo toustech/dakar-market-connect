@@ -6,8 +6,8 @@ export const Footer = () => (
     <div className="container-custom grid gap-10 py-12 md:grid-cols-4">
       <div>
         <div className="flex items-center gap-2 font-display text-xl font-extrabold">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-sun text-primary">M</span>
-          Marsé <span className="text-highlight">Bi</span>
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-sun text-primary">e</span>
+          e-<span className="text-highlight">Sandika</span>
         </div>
         <p className="mt-3 text-sm text-primary-foreground/75">
           Le marché du Sénégal, livré chez vous.
@@ -41,7 +41,7 @@ export const Footer = () => (
           <span className="rounded-full bg-primary-foreground/10 px-3 py-1.5">Cash</span>
         </div>
         <p className="mt-3 text-xs text-primary-foreground/60">
-          © {new Date().getFullYear()} Marsé Bi · Dakar, Sénégal
+          © {new Date().getFullYear()} e-Sandika · Dakar, Sénégal
         </p>
       </div>
     </div>

@@ -11,10 +11,10 @@ const faqs = [
 const APropos = () => (
   <section className="container-custom py-10 sm:py-14">
     <header className="mb-10 max-w-2xl">
-      <p className="wolof">Ñun ñoo di Marsé Bi</p>
+      <p className="wolof">Ñun ñoo di e-Sandika</p>
       <h1 className="font-display text-3xl font-extrabold sm:text-4xl">À propos & FAQ</h1>
       <p className="mt-3 text-muted-foreground">
-        Marsé Bi connecte les vendeurs des marchés sénégalais à leurs clients en ligne.
+        e-Sandika connecte les vendeurs des marchés sénégalais à leurs clients en ligne.
         Notre mission : rendre le marché accessible, rapide et fiable, tout en soutenant l'économie locale.
       </p>
     </header>

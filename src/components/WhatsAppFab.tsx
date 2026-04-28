@@ -4,7 +4,7 @@ const PHONE = "221770000000";
 
 export const WhatsAppFab = () => (
   <a
-    href={`https://wa.me/${PHONE}?text=${encodeURIComponent("Asalaa maalekum 👋, je souhaite des informations sur Marsé Bi.")}`}
+    href={`https://wa.me/${PHONE}?text=${encodeURIComponent("Asalaa maalekum 👋, je souhaite des informations sur e-Sandika.")}`}
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Contact WhatsApp"

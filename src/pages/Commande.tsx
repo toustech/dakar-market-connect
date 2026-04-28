@@ -177,7 +177,7 @@ const Commande = () => {
               <div className="flex flex-wrap justify-center gap-3">
                 <button onClick={() => nav("/")} className="rounded-full border border-border px-5 py-2.5 font-semibold hover:bg-secondary">Retour à l'accueil</button>
                 <a
-                  href={`https://wa.me/221770000000?text=${encodeURIComponent("Bonjour, je viens de passer une commande sur Marsé Bi.")}`}
+                  href={`https://wa.me/221770000000?text=${encodeURIComponent("Bonjour, je viens de passer une commande sur e-Sandika.")}`}
                   target="_blank" rel="noopener noreferrer"
                   className="rounded-full bg-[#25D366] px-5 py-2.5 font-semibold text-white"
                 >

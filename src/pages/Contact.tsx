@@ -50,7 +50,7 @@ const Contact = () => {
         <aside className="space-y-4">
           {[
             { icon: Phone, label: "Téléphone", value: "+221 77 000 00 00" },
-            { icon: Mail, label: "Email", value: "contact@marsebi.sn" },
+            { icon: Mail, label: "Email", value: "contact@e-sandika.sn" },
             { icon: MapPin, label: "Adresse", value: "Marché Castors, Dakar" },
           ].map((c) => (
             <div key={c.label} className="flex items-start gap-3 rounded-2xl border border-border/60 bg-card p-5 shadow-card">

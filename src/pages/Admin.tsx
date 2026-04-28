@@ -94,7 +94,7 @@ const Admin = () => {
                 <button onClick={() => change(o.id, "livree")} className="rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground hover:scale-105">Marquer livrée</button>
                 <button onClick={() => change(o.id, "annulee")} className="rounded-full border border-destructive px-4 py-2 text-xs font-semibold text-destructive hover:bg-destructive hover:text-destructive-foreground">Annuler</button>
                 <a
-                  href={`https://wa.me/${o.customer.phone.replace(/\D/g, "")}?text=${encodeURIComponent(`Bonjour ${o.customer.name}, votre commande ${o.id} sur Marsé Bi a bien été reçue.`)}`}
+                  href={`https://wa.me/${o.customer.phone.replace(/\D/g, "")}?text=${encodeURIComponent(`Bonjour ${o.customer.name}, votre commande ${o.id} sur e-Sandika a bien été reçue.`)}`}
                   target="_blank" rel="noopener noreferrer"
                   className="rounded-full bg-[#25D366] px-4 py-2 text-xs font-semibold text-white"
                 >
