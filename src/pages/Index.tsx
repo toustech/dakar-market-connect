@@ -6,6 +6,7 @@ import { ArrowRight, ShieldCheck, Truck, Smartphone } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
 
 const Index = () => {
+  const { data: products = [] } = useProducts();
   const featured = products.slice(0, 4);
   return (
     <>
