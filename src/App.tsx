@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import APropos from "./pages/APropos";
 import Mentions from "./pages/Mentions";
 import Admin from "./pages/Admin";
+import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/a-propos" element={<APropos />} />
               <Route path="/mentions" element={<Mentions />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/auth" element={<Auth />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

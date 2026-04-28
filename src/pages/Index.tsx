@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import hero from "@/assets/hero-market.jpg";
-import { products, categories, formatFCFA } from "@/data/products";
+import { categories, formatFCFA } from "@/data/products";
+import { useProducts } from "@/hooks/useProducts";
 import { ArrowRight, ShieldCheck, Truck, Smartphone } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
 
 const Index = () => {
+  const { data: products = [] } = useProducts();
   const featured = products.slice(0, 4);
   return (
     <>
