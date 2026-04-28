@@ -1,4 +1,10 @@
 import mangues from "@/assets/p-mangues.jpg";
+import maad from "@/assets/p-maad.jpg";
+import tool from "@/assets/p-tool.jpg";
+import sidem from "@/assets/p-sidem.jpg";
+import neww from "@/assets/p-new.jpg";
+import guerte from "@/assets/p-guerte.jpg";
+import orange from "@/assets/p-orange.jpg";
 import legumes from "@/assets/p-legumes.jpg";
 import boubou from "@/assets/p-boubou.jpg";
 import panier from "@/assets/p-panier.jpg";
@@ -28,16 +34,88 @@ export const categories: { id: Category; label: string; wolof: string; emoji: st
 
 export const products: Product[] = [
   {
-    id: "mangues-kent",
-    name: "Mangues Kent",
-    nameWolof: "Mango Kent",
+    id: "mangue",
+    name: "Mangue",
+    nameWolof: "Mango",
     category: "fruits",
     price: 1500,
     unit: "le kg",
-    stock: 24,
+    stock: 30,
     vendor: "Fatou — Marché Castors",
     image: mangues,
-    description: "Mangues Kent juteuses et sucrées, cueillies à maturité dans la région de Casamance. Idéales pour jus, salades ou à déguster nature.",
+    description: "Mangues juteuses et sucrées, cueillies à maturité en Casamance. Idéales pour jus, salades ou à déguster nature.",
+  },
+  {
+    id: "maad",
+    name: "Maad",
+    nameWolof: "Maad",
+    category: "fruits",
+    price: 2000,
+    unit: "le kg",
+    stock: 20,
+    vendor: "Aïssatou — Marché Tilène",
+    image: maad,
+    description: "Fruit sauvage typique du Sénégal (saba senegalensis), à la chair sucrée-acidulée. Parfait nature ou en jus rafraîchissant.",
+  },
+  {
+    id: "tool",
+    name: "Tool",
+    nameWolof: "Tool",
+    category: "fruits",
+    price: 1800,
+    unit: "le kg",
+    stock: 15,
+    vendor: "Coopérative Kaolack",
+    image: tool,
+    description: "Detarium senegalense — fruit de brousse à la pulpe douce et parfumée, très apprécié dans les villages sénégalais.",
+  },
+  {
+    id: "sidem",
+    name: "Sidem",
+    nameWolof: "Sidem",
+    category: "fruits",
+    price: 1200,
+    unit: "le kg",
+    stock: 25,
+    vendor: "Mariama — Thiès",
+    image: sidem,
+    description: "Jujubes du Sahel (sidem), petits fruits rouges sucrés, riches en vitamine C. Une saveur d'enfance.",
+  },
+  {
+    id: "new",
+    name: "New (noix de cola)",
+    nameWolof: "New",
+    category: "fruits",
+    price: 3500,
+    unit: "le kg",
+    stock: 18,
+    vendor: "Babacar — Sandaga",
+    image: neww,
+    description: "Noix de cola fraîches, rouges et blanches, symbole de la Teranga sénégalaise. Offerte lors des cérémonies.",
+  },
+  {
+    id: "guerte",
+    name: "Guerte (arachide)",
+    nameWolof: "Guerte",
+    category: "fruits",
+    price: 1000,
+    unit: "le kg",
+    stock: 50,
+    vendor: "Modou — Diourbel",
+    image: guerte,
+    description: "Arachides fraîches en coque, cultivées dans le bassin arachidier du Sénégal. À griller ou à cuisiner en mafé.",
+  },
+  {
+    id: "orange",
+    name: "Orange",
+    nameWolof: "Soraas",
+    category: "fruits",
+    price: 1300,
+    unit: "le kg",
+    stock: 40,
+    vendor: "Fatou — Marché Castors",
+    image: orange,
+    description: "Oranges juteuses et sucrées, parfaites pour le jus du matin ou à savourer en quartiers.",
   },
   {
     id: "legumes-frais",
