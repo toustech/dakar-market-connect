@@ -37,6 +37,7 @@ const App = () => (
               <Route path="/a-propos" element={<APropos />} />
               <Route path="/mentions" element={<Mentions />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/auth" element={<Auth />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
