@@ -68,22 +68,43 @@ const Commande = () => {
     }, 800);
   };
 
-  const finalize = () => {
-    const order: Order = {
-      id: newOrderId(),
-      createdAt: new Date().toISOString(),
-      customer: form,
-      items: items.map((i) => ({ id: i.product.id, name: i.product.name, price: i.product.price, quantity: i.quantity })),
-      total,
-      paymentMethod: method,
-      status: method === "cash" ? "en_attente" : "confirmee",
-    };
-    saveOrder(order);
+  const finalize = async () => {
+    setLoading(true);
+    const reference = newReference();
+    const status = method === "cash" ? "en_attente" : "confirmee";
+    const { data: order, error } = await supabase
+      .from("orders")
+      .insert({
+        reference,
+        customer_name: form.name,
+        customer_phone: form.phone,
+        customer_address: form.address,
+        total,
+        payment_method: method,
+        status,
+      })
+      .select()
+      .single();
+    if (error || !order) {
+      setLoading(false);
+      toast.error(error?.message || "Erreur lors de l'enregistrement");
+      return;
+    }
+    const { error: itemsErr } = await supabase.from("order_items").insert(
+      items.map((i) => ({
+        order_id: order.id,
+        product_id: i.product.id,
+        product_name: i.product.name,
+        unit_price: i.product.price,
+        quantity: i.quantity,
+      }))
+    );
+    setLoading(false);
+    if (itemsErr) { toast.error(itemsErr.message); return; }
     clear();
     setStep("confirm");
-    toast.success("Commande enregistrée : " + order.id);
-    // simulate webhook
-    console.log("[webhook] HMAC SHA256 payload:", { id: order.id, total, method });
+    toast.success("Commande enregistrée : " + reference);
+    console.log("[webhook] HMAC SHA256 payload:", { reference, total, method });
   };
 
   return (
