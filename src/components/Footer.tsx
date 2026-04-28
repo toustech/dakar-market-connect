@@ -41,7 +41,7 @@ export const Footer = () => (
           <span className="rounded-full bg-primary-foreground/10 px-3 py-1.5">Cash</span>
         </div>
         <p className="mt-3 text-xs text-primary-foreground/60">
-          © {new Date().getFullYear()} Marsé Bi · Dakar, Sénégal
+          © {new Date().getFullYear()} e-Sandika · Dakar, Sénégal
         </p>
       </div>
     </div>
