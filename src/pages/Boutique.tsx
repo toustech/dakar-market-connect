@@ -1,16 +1,18 @@
 import { useSearchParams } from "react-router-dom";
 import { useMemo } from "react";
-import { products, categories, Category } from "@/data/products";
+import { categories, Category } from "@/data/products";
+import { useProducts } from "@/hooks/useProducts";
 import { ProductCard } from "@/components/ProductCard";
 import { cn } from "@/lib/utils";
 
 const Boutique = () => {
   const [params, setParams] = useSearchParams();
   const cat = (params.get("cat") as Category | null) || null;
+  const { data: products = [], isLoading } = useProducts();
 
   const filtered = useMemo(
     () => (cat ? products.filter((p) => p.category === cat) : products),
-    [cat]
+    [cat, products]
   );
 
   const setCat = (c: Category | null) => {
