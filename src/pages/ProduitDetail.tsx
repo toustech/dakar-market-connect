@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
-import { products, formatFCFA } from "@/data/products";
+import { formatFCFA } from "@/data/products";
+import { useProduct } from "@/hooks/useProducts";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 import { ArrowLeft, Minus, Plus, ShoppingBasket } from "lucide-react";
@@ -7,9 +8,13 @@ import { toast } from "sonner";
 
 const ProduitDetail = () => {
   const { id } = useParams();
-  const product = products.find((p) => p.id === id);
+  const { data: product, isLoading } = useProduct(id);
   const { add } = useCart();
   const [qty, setQty] = useState(1);
+
+  if (isLoading) {
+    return <div className="container-custom py-20 text-center text-muted-foreground">Chargement…</div>;
+  }
 
   if (!product) {
     return (
