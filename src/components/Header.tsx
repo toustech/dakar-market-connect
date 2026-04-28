@@ -22,7 +22,7 @@ export const Header = () => {
         <Link to="/" className="flex items-center gap-2 font-display text-xl font-extrabold text-primary">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-sun text-primary shadow-glow">M</span>
           <span>
-            Marsé <span className="text-accent">Bi</span>
+            e-<span className="text-accent">Sandika</span>
           </span>
         </Link>
 
