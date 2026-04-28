@@ -2,12 +2,15 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import { formatFCFA } from "@/data/products";
-import { newOrderId, saveOrder, Order } from "@/lib/orders";
+import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Loader2, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type Method = Order["paymentMethod"];
+type Method = "wave" | "orange-money" | "paydunya" | "cash";
+
+const newReference = () =>
+  "ESK-" + Date.now().toString(36).toUpperCase() + Math.random().toString(36).slice(2, 5).toUpperCase();
 
 const methods: { id: Method; label: string; subtitle: string; color: string }[] = [
   { id: "wave", label: "Wave", subtitle: "Paiement instantané", color: "bg-[#1BC8FF]" },
