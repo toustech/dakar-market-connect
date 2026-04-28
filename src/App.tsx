@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import APropos from "./pages/APropos";
 import Mentions from "./pages/Mentions";
 import Admin from "./pages/Admin";
+import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
